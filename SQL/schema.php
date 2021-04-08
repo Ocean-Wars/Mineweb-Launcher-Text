@@ -10,7 +10,7 @@ class LaunchertextAppSchema extends CakeSchema {
 	public function after($event = []) {
 	}
 
-	public $launchertext__launcher_text = [
+	public $launchertext__launcher_texts = [
         'id' => [
             'type' => 'integer',
             'null' => false,
