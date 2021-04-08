@@ -1,0 +1,34 @@
+{
+  "name": "Launcherhelper",
+  "author": "Lockface77",
+  "version": "1.0.0",
+  "admin_menus": {
+    "Launcher": {
+      "index": 5,
+      "icon": "tv",
+      "menu": {
+        "Launcher Slider": {
+          "index": 1,
+          "icon": "images",
+          "permission": "LAUNCHERHELPER__ADMIN_MANAGE_SLIDER",
+          "route": "/admin/launcherhelper"
+        }
+      }
+    }
+  },
+  "navbar_routes": {
+    "Launcher": "/launcherhelper"
+  },
+  "apiID":-1,
+  "useEvents": false,
+  "permissions" : {
+    "available" : [],
+    "default" : {
+      "0" : [],
+      "2" : []
+    }
+  },
+  "requirements" : {
+    "CMS" : "^1.2.0"
+  }
+}
