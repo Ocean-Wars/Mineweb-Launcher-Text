@@ -12,14 +12,11 @@ class LaunchertextController extends LaunchertextAppController
     public function index() {
         // we just want to send json objects
         $this->autoRender = false;
-
-        $this->loadModel('Launcherhelper.LauncherText');
-        $datas = $this->LauncherImage->get();
-        $result = array();
-        foreach ($datas as $data) {
-            array_push($result, $data['LauncherText']['image']);
-        }
-
+        $this->loadModel('Launchertext.LauncherText');
+        $datas = $this->LauncherText->get();
+        $result = ['version' => $datas[0]['LauncherText']['version'],
+            'text' => $datas[0]['LauncherText']['version']
+        ];
         $resultJS = json_encode($result);
         $this->response->type('json');
         $this->response->body($resultJS);
