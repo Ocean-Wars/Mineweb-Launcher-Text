@@ -1,7 +1,7 @@
 <?php
 
 
-class LauncherhelperController extends LauncherhelperAppController
+class LaunchertextController extends LaunchertextAppController
 {
     public function initialize()
     {
@@ -13,11 +13,11 @@ class LauncherhelperController extends LauncherhelperAppController
         // we just want to send json objects
         $this->autoRender = false;
 
-        $this->loadModel('Launcherhelper.LauncherImage');
+        $this->loadModel('Launcherhelper.Launchertext');
         $datas = $this->LauncherImage->get();
         $result = array();
         foreach ($datas as $data) {
-            array_push($result, $data['LauncherImage']['image']);
+            array_push($result, $data['Launchertext']['image']);
         }
 
         $resultJS = json_encode($result);
@@ -29,7 +29,7 @@ class LauncherhelperController extends LauncherhelperAppController
     public function admin_index()
     {
         if ($this->isConnected and $this->User->isAdmin()) {
-            $this->loadModel('Launcherhelper.LauncherImage');
+            $this->loadModel('Launcherhelper.Launchertext');
             if ($this->request->is('ajax')) {
                 $this->autoRender = null;
                 $image = $this->request->data['image'];
@@ -49,7 +49,7 @@ class LauncherhelperController extends LauncherhelperAppController
         if ($this->isConnected and $this->User->isAdmin()) {
             $this->autoRender = null;
 
-            $this->loadModel('Launcherhelper.LauncherImage');
+            $this->loadModel('Launcherhelper.Launchertext');
 
             //J'utilise _delete() car delete() existe déjà avec cakephp
             $this->LauncherImage->_delete($id);

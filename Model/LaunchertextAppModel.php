@@ -1,7 +1,7 @@
 <?php
 
 
-class LauncherhelperAppModel extends AppModel
+class LaunchertextAppModel extends AppModel
 {
     public $tablePrefix = 'launcherhelper__';
 }

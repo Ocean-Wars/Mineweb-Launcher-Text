@@ -1,5 +1,5 @@
 <?php 
-class LauncherhelperAppSchema extends CakeSchema {
+class LaunchertextAppSchema extends CakeSchema {
 
     public $file = 'schema.php';
 
@@ -10,14 +10,20 @@ class LauncherhelperAppSchema extends CakeSchema {
 	public function after($event = []) {
 	}
 
-	public $launcherhelper__launcher_images = [
+	public $launchertext__launcher_text = [
         'id' => [
             'type' => 'integer',
             'null' => false,
             'default' => null,
             'unsigned' => false,
             'key' => 'primary'],
-        'image' => [
+        'version' => [
+            'type' => 'string',
+            'null' => false,
+            'default' => null,
+            'collate' => 'latin1_swedish_ci',
+            'charset' => 'latin1'],
+        'text' => [
             'type' => 'string',
             'null' => false,
             'default' => null,
