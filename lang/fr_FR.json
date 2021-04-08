@@ -1,5 +1,5 @@
 {
-  "LAUNCHERHELPER__ADD": "Ajouter une image",
-  "LAUNCHERHELPER__IMAGES": "Images",
-  "LAUNCHERHELPER__NO_IMAGE": "Merci de spécifier une image"
+  "LAUNCHERTEXT__PATCH_NOTE": "Patch note",
+  "LAUNCHERTEXT__VERSION": "Version",
+  "LAUNCHERTEXT__PATCH_TEXT": "Texte"
 }
