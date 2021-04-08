@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="patch-text"><?= $Lang->get('LAUNCHERTEXT__PATCH_TEXT') ?></label>
-                                    <textarea class="form-control" id="patch-text" rows="10">
+                                    <textarea class="form-control" name="text" id="patch-text" rows="10">
                                         <?php
                                             if (!empty($datas)) {
                                                 echo $datas[0]['LauncherText']['text'];

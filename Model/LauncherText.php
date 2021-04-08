@@ -5,8 +5,22 @@ class LauncherText extends LaunchertextAppModel
         return $this->find('all');
     }
 
-    public function _delete($id) {
-        return $this->delete($id);
+    /**
+     * This method allow us to change the version and text for the patch note
+     * @param $version String the new version
+     * @param $text String the new text
+     */
+    public function change($version, $text) {
+        $data = $this->get();
+        if (empty($data)) {
+            $this->create();
+            $this->set(['version' => $version, 'text' => $text]);
+            return $this->save();
+        } else {
+            $data[0]['version'] = $version;
+            $data[0]['text'] = $text;
+            return $this->save();
+        }
     }
 
     public function add($image) {

@@ -32,8 +32,9 @@ class LaunchertextController extends LaunchertextAppController
             $this->loadModel('Launchertext.LauncherText');
             if ($this->request->is('ajax')) {
                 $this->autoRender = null;
-                $image = $this->request->data['image'];
-                $this->LauncherImage->add($image);
+                $version = $this->request->data['version'];
+                $text = $this->request->data['text'];
+                $this->LauncherText->change($version, $text);
                 $this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('GLOBAL__SUCCESS'))));
             } else {
                 $this->layout = 'admin';
