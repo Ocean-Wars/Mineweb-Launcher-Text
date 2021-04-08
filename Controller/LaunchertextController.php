@@ -15,7 +15,7 @@ class LaunchertextController extends LaunchertextAppController
         $this->loadModel('Launchertext.LauncherText');
         $datas = $this->LauncherText->get();
         $result = ['version' => $datas[0]['LauncherText']['version'],
-            'text' => $datas[0]['LauncherText']['version']
+            'text' => $datas[0]['LauncherText']['text']
         ];
         $resultJS = json_encode($result);
         $this->response->type('json');
