@@ -10,17 +10,15 @@ class LauncherText extends LaunchertextAppModel
      * @param $version String the new version
      * @param $text String the new text
      */
-    public function change($version, $text) {
+    public function change($version, $text)
+    {
         $data = $this->get();
-        if (empty($data)) {
-            $this->create();
-            $this->set(['version' => $version, 'text' => $text]);
-            return $this->save();
-        } else {
-            $data[0]['version'] = $version;
-            $data[0]['text'] = $text;
-            return $this->save();
+        if (!empty($data)) {
+            $this->delete(1);
         }
+        $this->create();
+        $this->set(['version' => $version, 'text' => $text]);
+        return $this->save();
     }
 
     public function add($image) {
