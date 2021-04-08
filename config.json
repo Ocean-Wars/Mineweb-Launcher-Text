@@ -3,8 +3,8 @@
   "author": "Lockface77",
   "version": "1.0.0",
   "admin_menus": {
-    "Launcher": {
-      "index": 5,
+    "Launchertext": {
+      "index": 6,
       "icon": "tv",
       "menu": {
         "Launcher Text": {

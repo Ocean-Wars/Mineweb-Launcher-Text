@@ -37,7 +37,7 @@ class LaunchertextController extends LaunchertextAppController
                 $this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('GLOBAL__SUCCESS'))));
             } else {
                 $this->layout = 'admin';
-                $datas = $this->LauncherImage->get();
+                $datas = $this->LauncherText->get();
                 $this->set(compact('datas'));
             }
         } else {
