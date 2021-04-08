@@ -3,5 +3,5 @@
 
 class LaunchertextAppModel extends AppModel
 {
-    public $tablePrefix = 'launcherhelper__';
+    public $tablePrefix = 'launchertext__';
 }
