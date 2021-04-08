@@ -23,13 +23,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="patch-text"><?= $Lang->get('LAUNCHERTEXT__PATCH_TEXT') ?></label>
-                                    <textarea class="form-control" name="text" id="patch-text" rows="10">
-                                        <?php
+                                    <textarea class="form-control" name="text" id="patch-text" rows="10"><?php
                                             if (!empty($datas)) {
                                                 echo $datas[0]['LauncherText']['text'];
                                             }
-                                        ?>
-                                    </textarea>
+                                        ?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary center-block">
